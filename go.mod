@@ -1,3 +1,3 @@
-module github.com/Albus001/feishu
+module feishu
 
 go 1.16
