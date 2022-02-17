@@ -3,8 +3,8 @@ package api
 import (
 	"encoding/json"
 	"errors"
-	"feishu/common"
 	"fmt"
+	"github.com/Albus001/feishu/common"
 )
 
 type MessageBody struct {
