@@ -29,13 +29,18 @@ func main() {
 		return
 	}
 	fmt.Println(userId)
-	//err1 := feishu.SendMessage("text", userId, "Hello World")
-	err1 := feishu.SendMsg("chat_id", "oc_xxxxxxxxxx", "Hello World")
-	if err1 != nil {
-		fmt.Println(err1)
-	}
-	err2 := feishu.SendMsg("user_id", userId, "Hello World")
+	//err1 := feishu.SendMsg("chat_id", "oc_xxxxxxxxxx", "text","Hello World")
+	//if err1 != nil {
+	//	fmt.Println(err1)
+	//}
+
+	msg := "{\"zh_cn\": {\"title\": \"测试\", \"content\": [[{\"tag\": \"text\", \"text\": \"你好\"}, {\"tag\": \"a\", \"text\": \"123\", \"href\": \"http://www.feishu.cn\"}]]}}"
+	err2 := feishu.SendMsg("user_id", userId, "post", msg)
 	if err2 != nil {
 		fmt.Println(err2)
+	}
+	err3 := feishu.SendMsg("user_id", userId, "text", msg)
+	if err3 != nil {
+		fmt.Println(err3)
 	}
 }
