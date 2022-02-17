@@ -1,8 +1,8 @@
 package main
 
 import (
-	"feishu/api"
 	"fmt"
+	"github.com/Albus001/feishu/api"
 )
 
 func main() {
